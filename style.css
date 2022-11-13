@@ -177,6 +177,13 @@ h1 {
   box-sizing: border-box;
   border-radius: 40px 40px 0 0;
 }
+.lbl-score,
+.score {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .area-player {
   width: 560px;
   height: 250px;

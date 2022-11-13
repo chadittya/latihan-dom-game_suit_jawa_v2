@@ -144,6 +144,10 @@ function putar() {
 
 // event game yang efektif dari WPU
 const choises = document.querySelectorAll("li img");
+const aiScore = document.querySelector(".ai");
+const plScore = document.querySelector(".pl");
+let plCounter = 0;
+let aiCounter = 0;
 choises.forEach(function (pil) {
   pil.addEventListener("click", function () {
     const getAiItem = aiGenerate();
@@ -160,6 +164,13 @@ choises.forEach(function (pil) {
       );
       const txtResult = document.querySelector(".info");
       txtResult.innerHTML = gameResult;
+      if (gameResult == "MENANG!") {
+        plCounter++;
+        plScore.innerHTML = plCounter;
+      } else if (gameResult == "KALAH!") {
+        aiCounter++;
+        aiScore.innerHTML = aiCounter;
+      }
     }, 1000);
 
     // console.log("ai = " + getAiItem);
